@@ -66,8 +66,15 @@ oc get compliancesuites -w
 
 # watch individual pods
 oc get pods -w
+```
 
-# to check remediation
+9.  Check Results
+
+```
+# to see results of scan
+oc get compliancecheckresult
+
+# to check remediations
 oc get complianceremediations
 
 # to actually apply remediation, and look for apply: false and change that to apply: true
@@ -75,7 +82,7 @@ oc edit complianceremediation/rhcos4-moderate-worker-no-direct-root-logins
 # or oc edit complianceremediation/<whatever rule>
 ```
 
-9.  See Volumes
+10.  See Volumes
 
 ```
 # see pv
@@ -85,7 +92,7 @@ oc get pv
 oc get pvc
 ```
 
-10. Deploy Pod That Mounts the Volume
+11. Deploy Pod That Mounts the Volume
 
 ```
 # create pod, give it a minute
@@ -95,13 +102,13 @@ oc apply -f ./2_pv_extract_pod.yml
 oc exec pods/pv-extract -- ls /workers-scan-results/0
 ```
 
-11. Copy results locally
+12. Copy results locally
 
 ```
 oc cp pv-extract:/workers-scan-results .
 ```
 
-12. Unzip
+13. Unzip
 
 ```
 cd 0
@@ -109,7 +116,7 @@ bunzip ./openscap-pod-c9cf5cdf58bbffcb811a8f7666c3d463c590d70f.xml.bzip2
 # look for *.xml.out file
 ```
 
-13. Delete Pod
+14. Delete Pod
 
 ```
 # if you want
@@ -121,3 +128,4 @@ oc delete pod pv-extract
 ## References
 1.  [Github](https://github.com/openshift/compliance-operator)
 2.  [OpenShift Docs](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-understanding.html)
+3.  [OpenShift Troubleshooting Docs](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-troubleshooting.html)
