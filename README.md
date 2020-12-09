@@ -129,3 +129,4 @@ oc delete pod pv-extract
 1.  [Github](https://github.com/openshift/compliance-operator)
 2.  [OpenShift Docs](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-understanding.html)
 3.  [OpenShift Troubleshooting Docs](https://docs.openshift.com/container-platform/4.6/security/compliance_operator/compliance-operator-troubleshooting.html)
+4.  [Great Demo on Youtube](https://www.youtube.com/watch?v=phillosgRyo)
