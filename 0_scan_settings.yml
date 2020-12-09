@@ -1,0 +1,16 @@
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ScanSetting
+metadata:
+  name: jon-scan-setting
+  namespace: openshift-operators
+  labels:
+    app: jon-compliance
+autoApplyRemediations: false
+debug: true
+rawResultStorage:
+  rotation: 10
+  size: 2Gi
+roles:
+  - worker
+  - master
+schedule: 0 1 * * *
