@@ -2,7 +2,7 @@
 
 1. Install Operator - Use OperatorHub and search for `Compliance Operator` and install it.  Wait a few minutes.
 
-2. Use correct project
+2. Use correct project.  All instructions from here assume you are using this project.
 
 ```
 oc project openshift-operators
@@ -11,7 +11,7 @@ oc project openshift-operators
 3. See installed Profiles
 
 ```
-oc get -n openshift-operators profiles.compliance
+oc get profiles.compliance
 ```
 
 4. View Details
@@ -27,7 +27,7 @@ oc get -n openshift-operators -oyaml rules.compliance <rule_name>
 # ocp4-accounts-restrict-service-account-tokens for instance
 ```
 
-6.  Create ScanSetting
+6.  Create `ScanSetting`
 
 ```
 # Web Console
@@ -42,7 +42,7 @@ or
 oc apply -f ./0_scan_settings.yml
 ```
 
-7.  Create ScanSettingBinding
+7.  Create `ScanSettingBinding`
 
 ```
 # Web Console
