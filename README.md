@@ -5,7 +5,7 @@
 2. Use correct project.  All instructions from here assume you are using this project.
 
 ```
-oc project openshift-operators
+oc project openshift-compliance
 ```
 
 3. See installed Profiles
