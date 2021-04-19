@@ -2,7 +2,7 @@ apiVersion: "v1"
 kind: Pod
 metadata:
   name: pv-extract
-  namespace: openshift-operators
+  namespace: openshift-compliance
   labels:
     app: jon-compliance
 spec:

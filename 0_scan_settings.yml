@@ -2,7 +2,7 @@ apiVersion: compliance.openshift.io/v1alpha1
 kind: ScanSetting
 metadata:
   name: jon-scan-setting
-  namespace: openshift-operators
+  namespace: openshift-compliance
   labels:
     app: jon-compliance
 autoApplyRemediations: false

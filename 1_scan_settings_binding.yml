@@ -2,7 +2,7 @@ apiVersion: compliance.openshift.io/v1alpha1
 kind: ScanSettingBinding
 metadata:
   name: nist-moderate
-  namespace: openshift-operators
+  namespace: openshift-compliance
   labels:
     app: jon-compliance
 profiles:
