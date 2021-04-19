@@ -17,13 +17,13 @@ oc get profiles.compliance
 4. View Details
 
 ```
-oc get -n openshift-operators -oyaml profiles.compliance <profile name>
+oc get -oyaml profiles.compliance <profile name>
 # ocp4-cis for instance
 ```
 
 5. View Rules
 ```
-oc get -n openshift-operators -oyaml rules.compliance <rule_name>
+oc get -oyaml rules.compliance <rule_name>
 # ocp4-accounts-restrict-service-account-tokens for instance
 ```
 
